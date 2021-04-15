@@ -1,0 +1,39 @@
+import java.util.*;
+public class solution{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+        String s1 = "";
+
+        //keep the count of 1 2 and 3
+        for(int i =0;i<s.length();i++){
+            if(s.charAt(i) == '1'){
+                count1++;
+            }else if(s.charAt(i) == '2'){
+                count2++;
+            }else if(s.charAt(i) == '3'){
+                count3++;
+            }
+        }
+            
+        
+        for(int j =0;j<count1;j++){
+            s1 = s1 + "1+";
+        }
+          for(int j =0;j<count2;j++){
+            s1 = s1 + "2+";
+        }
+          for(int j =0;j<count3;j++){
+            s1 = s1 + "3+";
+        }
+        
+        //last '+' after 3 has to be removed
+        s1 = s1.substring(0,s.length());
+        System.out.println(s1);
+        
+        
+    }
+}
